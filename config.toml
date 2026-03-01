@@ -1,0 +1,54 @@
+# QR Code 3D Print Config
+# Run: uv run generate_qr.py
+# CLI flags override anything set here.
+
+# Text to encode. Can also be set in input.txt (this takes priority if no 'text' key here).
+# text = "https://example.com"
+
+# Output STL base name — two files are produced: output_base.stl and output_qr.stl
+out = "output.stl"
+
+
+[tag]
+# Tag width in mm. Height is auto-derived from content.
+width  = 68.8
+
+# Base plate thickness in mm
+thickness = 3.0
+
+# Uniform padding around all content (edges, between QR and label, hole clearance) in mm
+padding = 2.0
+
+# Round the tag corners
+round_corners = true
+corner_radius = 10.0
+
+
+[qr]
+# Raised height of QR blocks in mm
+qr_thickness = 2.0
+
+# Quiet-zone blocks around the QR code (spec = 4; 2 works with all modern scanners)
+quiet_zone_blocks = 2
+
+# Recess the QR code into the tag instead of raising it
+deboss = false
+
+
+[hole]
+# Hanging hole at the top
+enabled = true
+radius  = 4.0
+x       = 0.0   # horizontal offset from center
+
+
+[label]
+# Text and date shown below the QR code
+text = "1Pass"
+date = "02/26/26"   # use "today" to auto-insert today's date
+
+# Font size in mm
+size = 8.0
+
+# Raised height of label text in mm
+height = 1.5
