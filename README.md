@@ -1,6 +1,6 @@
 # qrcode-3d-print
 
-Two-color 3D-printable QR code hang tag generator.
+Two-color 3D-printable QR code hang tag generator. Python encodes your text into a QR matrix, computes the full tag layout, and writes OpenSCAD files with all positions baked in as literal mm values. OpenSCAD then renders the geometry to STL -- it's used purely as a renderer, with no logic in the `.scad` files.
 
 <p align="center">
   <img src="examples/preview_angle.png" width="360" alt="Angled view">
