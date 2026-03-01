@@ -3,8 +3,8 @@
 Two-color 3D-printable QR code hang tag generator.
 
 <p align="center">
-  <img src="examples/preview_angle.png" width="340" alt="Angled view">
-  <img src="examples/preview_detail.png" width="400" alt="Detail view">
+  <img src="examples/preview_angle.png" width="360" alt="Angled view">
+  <img src="examples/preview_detail.png" width="360" alt="Detail view">
 </p>
 
 Produces two STL files sharing the same coordinate system -- import both into your slicer and assign different filament colors:
