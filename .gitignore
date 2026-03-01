@@ -2,6 +2,10 @@ __pycache__/
 .venv/
 uv.lock
 
-# Ignore generated files in root, but keep examples/
+# Local config and secrets -- copy from *.example.* to get started
+config.toml
+input.txt
+
+# Generated build artifacts in root
 /*.stl
 /*.scad

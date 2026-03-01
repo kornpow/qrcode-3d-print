@@ -17,21 +17,24 @@ Example STLs are in [`examples/`](examples/).
 ## Usage
 
 ```
+cp config.example.toml config.toml
+cp input.example.txt input.txt
+# edit input.txt with your text/URL, edit config.toml to taste
 uv run generate_qr.py
 ```
 
-Put the text to encode in `input.txt` (or use `--text`). Edit `config.toml` to taste.
-
 Requires Python 3.11+, [uv](https://github.com/astral-sh/uv), and [OpenSCAD](https://openscad.org/).
+
+`config.toml` and `input.txt` are gitignored -- your local settings and secrets stay out of version control. The example files show all available options.
 
 ## Config
 
-All settings live in `config.toml`. CLI flags override config values.
+All settings live in `config.toml` (copy from `config.example.toml`). CLI flags override config values.
 
 ```toml
 [tag]
 width  = 68.8        # mm (height is auto-derived from content)
-thickness = 3.0      # base plate thickness
+thickness = 1.8      # base plate thickness
 padding = 2.0        # uniform gap around all content
 round_corners = true
 corner_radius = 10.0
@@ -47,10 +50,10 @@ radius  = 4.0
 x       = 0.0            # horizontal offset from center
 
 [label]
-text = "1Pass"
-date = "02/26/26"        # or "today" for auto
+text = "My Tag"
+date = "today"           # or "02/26/26", or omit
 size = 8.0               # font size
-height = 1.5             # raised height of label text
+height = 0.8             # raised height of label text
 ```
 
 Tag height is auto-derived from content. Use `--height` on the CLI to force a specific height.

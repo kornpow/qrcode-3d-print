@@ -1,6 +1,9 @@
 # QR Code 3D Print Config
 # Run: uv run generate_qr.py
 # CLI flags override anything set here.
+#
+# Copy this file to config.toml and edit to taste:
+#   cp config.example.toml config.toml
 
 # Text to encode. Can also be set in input.txt (this takes priority if no 'text' key here).
 # text = "https://example.com"
@@ -44,8 +47,8 @@ x       = 0.0   # horizontal offset from center
 
 [label]
 # Text and date shown below the QR code
-text = "1Pass"
-date = "02/26/26"   # use "today" to auto-insert today's date
+text = "My Tag"
+date = "today"   # use "today" to auto-insert today's date
 
 # Font size in mm
 size = 8.0
