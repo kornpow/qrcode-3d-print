@@ -14,7 +14,7 @@ out = "output.stl"
 width  = 68.8
 
 # Base plate thickness in mm
-thickness = 3.0
+thickness = 1.8
 
 # Uniform padding around all content (edges, between QR and label, hole clearance) in mm
 padding = 2.0
@@ -51,4 +51,4 @@ date = "02/26/26"   # use "today" to auto-insert today's date
 size = 8.0
 
 # Raised height of label text in mm
-height = 1.5
+height = 0.8
