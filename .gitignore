@@ -1,5 +1,7 @@
-*.stl
-*.scad
 __pycache__/
 .venv/
 uv.lock
+
+# Ignore generated files in root, but keep examples/
+/*.stl
+/*.scad
